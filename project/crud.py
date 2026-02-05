@@ -37,7 +37,10 @@ def update_car(db: Session, car_id: int, car: CarUpdate):
     return db_car
 
 
-def delete_car(db: Session, db_car: Cars):
+def delete_car(db: Session, car_id: int):
+    db_car = get_car_by_id(db, car_id)
+    if not db_car:
+        raise None
     db.delete(db_car)
     db.commit()
 

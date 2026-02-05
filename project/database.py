@@ -8,7 +8,7 @@ engine = create_engine(DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 Base = declarative_base()
 
-def get_database():
+def get_db():
     database = SessionLocal()
     try:
         yield database

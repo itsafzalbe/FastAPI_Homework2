@@ -21,11 +21,11 @@ class CarUpdate(BaseModel):
     brand: Optional[ str ]
     model: Optional[ str ]
     year: Optional[ int ]
-    price = Optional[ float ]
-    mileage = Optional[ int ]
-    color = Optional[ str ]
-    fuel_type = Optional[ str ]
-    transmission = Optional[ str ]
+    price: Optional[float] = None
+    mileage: Optional[ int ]
+    color: Optional[ str ]
+    fuel_type: Optional[str]
+    transmission: Optional[ str ]
 
 
 class CarResponse(CarBase):
